@@ -1,0 +1,11 @@
+{
+  "id": "mock",
+  "name": "Mock Plugin",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "capabilities": ["terminal"],
+  "params": [
+    {"key": "host", "label": "Host", "type": "string", "required": true},
+    {"key": "failOnOpen", "label": "模拟连接失败", "type": "bool", "default": false}
+  ]
+}

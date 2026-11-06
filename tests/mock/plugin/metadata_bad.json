@@ -1,0 +1,8 @@
+{
+  "id": "mock_bad",
+  "name": "Bad Version Plugin",
+  "version": "1.0.0",
+  "apiVersion": 999,
+  "capabilities": [],
+  "params": []
+}

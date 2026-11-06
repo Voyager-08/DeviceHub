@@ -1,0 +1,15 @@
+{
+  "id": "ssh",
+  "name": "SSH",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "capabilities": ["terminal"],
+  "params": [
+    {"key": "host", "label": "主机", "type": "string", "required": true},
+    {"key": "port", "label": "端口", "type": "int", "default": 22},
+    {"key": "user", "label": "用户名", "type": "string", "required": true},
+    {"key": "auth", "label": "认证方式", "type": "enum", "options": ["password", "key"]},
+    {"key": "password", "label": "密码", "type": "password"},
+    {"key": "keyFile", "label": "私钥文件", "type": "file"}
+  ]
+}
