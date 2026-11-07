@@ -46,12 +46,10 @@ DashboardPage::DashboardPage(PluginManager *pluginManager,
 
     auto *header = new QHBoxLayout();
     auto *title = new QLabel(QStringLiteral("仪表盘"), this);
-    QFont titleFont = title->font();
-    titleFont.setBold(true);
-    titleFont.setPointSize(titleFont.pointSize() + 6);
-    title->setFont(titleFont);
+    title->setObjectName(QStringLiteral("pageTitle"));
 
     auto *editButton = new QPushButton(QStringLiteral("编辑仪表盘"), this);
+    editButton->setObjectName(QStringLiteral("pageAction"));
     header->addWidget(title);
     header->addStretch();
     header->addWidget(editButton);
@@ -70,7 +68,8 @@ DashboardPage::DashboardPage(PluginManager *pluginManager,
     contentLayout->addLayout(m_grid);
 
     m_emptyLabel = new QLabel(
-        QStringLiteral("暂无仪表盘卡片\n请先在设备页连接一台设备"), m_contentWidget);
+        QStringLiteral("暂无仪表盘卡片  请先在设备页连接一台设备"), m_contentWidget);
+    m_emptyLabel->setObjectName(QStringLiteral("pageEmptyHint"));
     m_emptyLabel->setAlignment(Qt::AlignCenter);
     m_emptyLabel->setWordWrap(true);
     contentLayout->addWidget(m_emptyLabel, 1);

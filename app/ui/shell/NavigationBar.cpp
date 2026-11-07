@@ -18,6 +18,7 @@ NavigationBar::NavigationBar(const QStringList &items, QWidget *parent)
     m_layout->setSpacing(6);
 
     auto *brand = new QLabel(QStringLiteral("DeviceHub"), this);
+    brand->setObjectName(QStringLiteral("navBrand"));
     QFont brandFont = brand->font();
     brandFont.setBold(true);
     brandFont.setPointSize(brandFont.pointSize() + 4);

@@ -1,0 +1,159 @@
+/* DeviceHub Global Stylesheet */
+
+/* ============ 全局基础 ============ */
+QWidget {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    font-size: 13px;
+    color: #E4E7EC;
+}
+
+QMainWindow {
+    background-color: #0F1624;
+}
+
+/* ============ 左侧导航栏 ============ */
+NavigationBar {
+    background-color: #111C2E;
+    border-right: 1px solid #1E2A3D;
+}
+
+QLabel#navBrand {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0 16px 0;
+}
+
+QPushButton#NavigationButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #98A2B3;
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 14px;
+}
+
+QPushButton#NavigationButton:hover {
+    background-color: #1E2A3D;
+    color: #E4E7EC;
+}
+
+QPushButton#NavigationButton:checked {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+/* ============ 页面通用 ============ */
+QStackedWidget {
+    background-color: #0F1624;
+}
+
+QLabel#pageTitle {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+QLabel#pageEmptyHint {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* ============ 按钮统一 ============ */
+QPushButton {
+    background-color: #2563EB;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #1D4ED8;
+}
+
+QPushButton:pressed {
+    background-color: #1E40AF;
+}
+
+QPushButton#pageAction {
+    background-color: #1E2A3D;
+    color: #E4E7EC;
+    border: 1px solid #2C3A50;
+}
+
+QPushButton#pageAction:hover {
+    background-color: #2C3A50;
+    border-color: #3D4A63;
+}
+
+/* ============ QTreeWidget (设备页) ============ */
+QTreeWidget {
+    background-color: #111C2E;
+    border: 1px solid #1E2A3D;
+    border-radius: 10px;
+    color: #E4E7EC;
+    alternate-background-color: #162032;
+    selection-background-color: #2563EB;
+    selection-color: #FFFFFF;
+    outline: none;
+}
+
+QTreeWidget::item {
+    padding: 6px 12px;
+    border-bottom: 1px solid transparent;
+}
+
+QTreeWidget::item:hover {
+    background-color: #1E2A3D;
+}
+
+QHeaderView::section {
+    background-color: #162032;
+    color: #98A2B3;
+    border: none;
+    border-bottom: 1px solid #1E2A3D;
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+/* ============ QSplitter ============ */
+QSplitter::handle {
+    background-color: #1E2A3D;
+}
+
+QSplitter::handle:hover {
+    background-color: #2563EB;
+}
+
+/* ============ QScrollBar ============ */
+QScrollBar:vertical {
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #2C3A50;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #3D4A63;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+    background: none;
+}
+
+/* ============ 空状态卡片 ============ */
+QFrame#emptyStateCard {
+    background-color: #111C2E;
+    border: 1px dashed #2C3A50;
+    border-radius: 12px;
+}

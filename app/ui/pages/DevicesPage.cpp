@@ -36,12 +36,10 @@ DevicesPage::DevicesPage(PluginManager *pluginManager,
 
     auto *header = new QHBoxLayout();
     auto *title = new QLabel(QStringLiteral("设备"), this);
-    QFont titleFont = title->font();
-    titleFont.setBold(true);
-    titleFont.setPointSize(titleFont.pointSize() + 6);
-    title->setFont(titleFont);
+    title->setObjectName(QStringLiteral("pageTitle"));
 
     auto *newButton = new QPushButton(QStringLiteral("新建设备"), this);
+    newButton->setObjectName(QStringLiteral("pageAction"));
     header->addWidget(title);
     header->addStretch();
     header->addWidget(newButton);

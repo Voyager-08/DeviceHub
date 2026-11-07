@@ -51,8 +51,13 @@ target_link_libraries(devicehub_app
 )
 
 # 主程序:只包含入口
+qt_add_resources(APP_RESOURCES
+    resources/resources.qrc
+)
+
 add_executable(devicehub
     main.cpp
+    ${APP_RESOURCES}
 )
 
 target_link_libraries(devicehub
